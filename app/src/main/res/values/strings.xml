@@ -1,3 +1,78 @@
 <resources>
-    <string name="app_name">MyTest</string>
+    <string name="app_name">壹代保</string>
+    <string name="login">登录</string>
+
+    <string name="all_images">全部图片</string>
+    <string name="folder_image_count">共%1$d张</string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="select_limit">最多选择%1$s张图片</string>
+    <string name="complete">完成</string>
+    <string name="select_complete">完成(%1$s/%2$s)</string>
+    <string name="preview_count">预览(%1$s)</string>
+    <string name="photo_crop">图片裁剪</string>
+    <string name="origin">原图</string>
+    <string name="origin_size">原图(%1$s)</string>
+
+    <!-- jpush -->
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_style_empty">style不能为空</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    <string name="logining">程序在后台执行, 请查看日志！</string>
+    <string name="setting_su">设置成功</string>
+    <string name="saleman_department">业务部</string>
+    <string name="audit_department">审核中心</string>
+    <string name="justice_department">法务部</string>
+
+    <string name="loading">正在请求数据,请稍候...</string>
+    <string name="token_error">您的账号在其它设备上登录，如果不是本人操作请及时修改密码！</string>
+
+    <!--HomeActivity-->
+    <string name="home_text_msg_evaluation">征信测评</string>
+    <string name="home_text_follow">跟进</string>
+    <string name="home_text_passed">通过</string>
+    <string name="home_text_salemanlist_title">申请贷款客户</string>
+    <string name="home_text_audit1_title">等待初审客户</string>
+    <string name="home_text_audit2_title">等待复审客户</string>
+    <string name="home_text_audit3_title">等待终审客户</string>
+    <string name="home_text_justice_title">上门催收客户</string>
+    <string name="home_left_text_follow">跟进客户</string>
+    <string name="home_left_text_passed">通过客户</string>
+    <string name="home_left_text_audit1">初审客户</string>
+    <string name="home_left_text_audit2">复审客户</string>
+    <string name="home_left_text_mineinfo">我的账号</string>
+
+    <!--PersonCenterActivirt-->
+    <string name="person_text_headimg">头像</string>
+    <string name="person_text_name">姓名</string>
+    <string name="person_text_accout">账号</string>
+    <string name="person_text_changepswd">修改密码</string>
+
+    <!--CreditListActivity-->
+    <string name="creditlist_create">新建征信</string>
+
+    <!--CreditInfoActivity-->
+    <string name="credit_detail">征信详情</string>
+    <string name="credit_buyermsg">购车人信息</string>
+    <string name="credit_sponsormsg">担保人信息</string>
+    <string name="credit_human_msg">个人信息</string>
+    <string name="credit_human2_msg">共同购车人</string>
+    <string name="credit_extra_img">附件</string>
+    <string name="credit_add_sponsor">添加担保人</string>
+
+    <!--BuyMsgInputActivity-->
+    <string name="buymsg_sponsor_hint">担保人信息</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="token_expired">身份已过期，请重新登陆</string>
+    <string name="user_illegal">用户名为空</string>
+    <string name="pwd_illegal">密码为空</string>
+    <string name="user_unLogin">用户未登录，请重新登录</string>
+
+
 </resources>

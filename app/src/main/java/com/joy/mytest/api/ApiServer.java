@@ -1,5 +1,6 @@
 package com.joy.mytest.api;
 
+import com.joy.mytest.bean.BannerBean;
 import com.joy.mytest.bean.UserBean;
 
 import retrofit2.Call;
@@ -22,4 +23,10 @@ public interface ApiServer {
     @FormUrlEncoded
     @POST("user/m/login")
     Call<UserBean> login(@Field("username") String username, @Field("pwd") String pwd);
+
+    /**
+     * 公告列表
+     */
+    @POST("rest/constant/listAnnouncement")
+    Call<BannerBean> getBannerList();
 }

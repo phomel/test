@@ -5,7 +5,8 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/12/19.
  */
-public class UserBean {
+public class UserBean extends BaseBean{
+
 
     /**
      * id : 2

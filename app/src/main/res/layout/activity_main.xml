@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.joy.mytest.MainActivity">
+    tools:context="com.joy.mytest.activity.LoginActivity">
 
-    <com.joy.mytest.widget.LargeScrollerImageView
-        android:id="@+id/large_iv"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        android:background="@color/blue_words">
 
-    <ImageView
-        android:id="@+id/iv"
-        android:src="@mipmap/iv"
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.joy.mytest.widget.BannerLayout
+        android:id="@+id/bl_banner"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="@dimen/dim386"
+        android:visibility="gone"
+        app:autoPlayDuration="3000"
+        app:indicatorMargin="@dimen/dim5"
+        app:indicatorPosition="centerBottom"
+        app:indicatorShape="oval"
+        app:indicatorSpace="@dimen/dim5"
+        app:scrollDuration="1000"
+        app:selectedIndicatorColor="#ffffffff"
+        app:selectedIndicatorHeight="@dimen/dim30"
+        app:selectedIndicatorWidth="@dimen/dim30"
+        app:unSelectedIndicatorColor="#cccccccc"
+        app:unSelectedIndicatorHeight="@dimen/dim30"
+        app:unSelectedIndicatorWidth="@dimen/dim30" />
 
 </LinearLayout>

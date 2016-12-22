@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape
+            android:shape="oval"
+            >
+            <solid android:color="#00aeff"></solid>
+            <!-- 渐变 -->
+            <gradient
+                android:startColor="#ff8c00"
+                android:endColor="#FFFFFF"
+                android:type="radial"
+                android:gradientRadius="50" />
+            <!-- 圆角 -->
+            <corners
+                android:radius="360dp" />
+            <!-- 描边 -->
+            <stroke
+                android:width="2dp"
+                android:color="#dcdcdc"
+                android:dashWidth="5dp"
+                android:dashGap="3dp" />
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:shape="rectangle"
+            >
+            <solid android:color="#00aeff"></solid>
+            <!-- 渐变 -->
+            <gradient
+                android:startColor="#00aeff"
+                android:endColor="#FFFFFF"
+                android:type="radial"
+                android:gradientRadius="1000" />
+            <!-- 圆角 -->
+            <corners
+                android:radius="360dp" />
+            <!-- 描边 -->
+            <stroke
+                android:width="2dp"
+                android:color="#dcdcdc"
+                android:dashWidth="5dp"
+                android:dashGap="3dp" />
+        </shape>
+    </item>
+
+</selector>
