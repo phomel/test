@@ -9,7 +9,6 @@ import com.joy.mytest.base.BaseActivity;
 import com.joy.mytest.listener.CallbackListener;
 import com.joy.mytest.mvp.presenter.ILoginPresenter;
 import com.joy.mytest.mvp.presenter.LoginPresenter;
-import com.joy.mytest.mvp.view.IloginView;
 import com.joy.mytest.mvp.view.ILoginView;
 import com.joy.mytest.util.ToastUtil;
 
