@@ -45,7 +45,11 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        mToolbar.setTitle(user.getUser().getRole().getName());
+        if (user != null){
+            mToolbar.setTitle(user.getUser().getRole().getName());
+        } else {
+            mToolbar.setTitle(R.string.user_unLogin);
+        }
         setSupportActionBar(mToolbar);
 
     }

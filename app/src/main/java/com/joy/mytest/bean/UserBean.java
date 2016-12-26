@@ -1,11 +1,15 @@
 package com.joy.mytest.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/19.
  */
-public class UserBean extends BaseBean{
+public class UserBean extends BaseBean implements Parcelable {
 
 
     /**
@@ -43,7 +47,7 @@ public class UserBean extends BaseBean{
         this.token = token;
     }
 
-    public static class User {
+    public static class User implements Serializable, Parcelable {
         private int id;
         private String username;
         private String name;
@@ -98,7 +102,7 @@ public class UserBean extends BaseBean{
             this.createDt = createDt;
         }
 
-        public static class RoleBean {
+        public static class RoleBean implements Serializable{
             private int departId;
             private String name;
             private int id;
@@ -141,7 +145,7 @@ public class UserBean extends BaseBean{
                 this.privileges = privileges;
             }
 
-            public static class PrivilegesBean {
+            public static class PrivilegesBean implements Serializable{
                 private int id;
                 private String name;
 
@@ -162,5 +166,73 @@ public class UserBean extends BaseBean{
                 }
             }
         }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeInt(this.id);
+            dest.writeString(this.username);
+            dest.writeString(this.name);
+            dest.writeSerializable(this.role);
+            dest.writeString(this.createDt);
+        }
+
+        public User() {
+        }
+
+        protected User(Parcel in) {
+            this.id = in.readInt();
+            this.username = in.readString();
+            this.name = in.readString();
+            this.role = (RoleBean) in.readSerializable();
+            this.createDt = in.readString();
+        }
+
+        public static final Creator<User> CREATOR = new Creator<User>() {
+            @Override
+            public User createFromParcel(Parcel source) {
+                return new User(source);
+            }
+
+            @Override
+            public User[] newArray(int size) {
+                return new User[size];
+            }
+        };
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeSerializable(this.user);
+        dest.writeString(this.token);
+    }
+
+    public UserBean() {
+    }
+
+    protected UserBean(Parcel in) {
+        this.user = (User) in.readSerializable();
+        this.token = in.readString();
+    }
+
+    public static final Parcelable.Creator<UserBean> CREATOR = new Parcelable.Creator<UserBean>() {
+        @Override
+        public UserBean createFromParcel(Parcel source) {
+            return new UserBean(source);
+        }
+
+        @Override
+        public UserBean[] newArray(int size) {
+            return new UserBean[size];
+        }
+    };
 }

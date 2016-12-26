@@ -2,28 +2,21 @@ package com.joy.mytest.activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.EditText;
 
 import com.joy.mytest.R;
 import com.joy.mytest.base.BaseActivity;
-import com.joy.mytest.bean.UserBean;
 import com.joy.mytest.listener.CallbackListener;
-import com.joy.mytest.manager.RetrofitManager;
 import com.joy.mytest.mvp.presenter.ILoginPresenter;
 import com.joy.mytest.mvp.presenter.LoginPresenter;
 import com.joy.mytest.mvp.view.IloginView;
+import com.joy.mytest.mvp.view.ILoginView;
 import com.joy.mytest.util.ToastUtil;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class LoginActivity extends BaseActivity implements IloginView{
+public class LoginActivity extends BaseActivity implements ILoginView {
 
     private String userName;
     private String pwd;
@@ -71,8 +64,8 @@ public class LoginActivity extends BaseActivity implements IloginView{
 
     @OnClick(R.id.login_btn)
     public void login() {
-        String userInput = userEt.getText().toString();
-        String pwdInput = pwdEt.getText().toString();
+        String userInput = userEt.getText().toString().trim();
+        String pwdInput = pwdEt.getText().toString().trim();
         if (TextUtils.isEmpty(userInput) || userInput == null) {
             ToastUtil.showShortMessage(context, R.string.user_illegal);
         } else if (TextUtils.isEmpty(pwdInput) || pwdInput == null) {

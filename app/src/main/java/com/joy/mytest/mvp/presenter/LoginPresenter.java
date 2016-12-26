@@ -5,7 +5,7 @@ import android.content.Context;
 import com.joy.mytest.listener.CallbackListener;
 import com.joy.mytest.mvp.model.ILoginModel;
 import com.joy.mytest.mvp.model.LoginModel;
-import com.joy.mytest.mvp.view.IloginView;
+import com.joy.mytest.mvp.view.ILoginView;
 
 /**
  * Created by Administrator on 2016/12/21.
@@ -13,10 +13,10 @@ import com.joy.mytest.mvp.view.IloginView;
 
 public class LoginPresenter implements ILoginPresenter {
 
-    private IloginView view;
+    private ILoginView view;
     private ILoginModel model;
 
-    public LoginPresenter(IloginView view, Context context) {
+    public LoginPresenter(ILoginView view, Context context) {
         this.view = view;
         this.model = new LoginModel(context);
     }
