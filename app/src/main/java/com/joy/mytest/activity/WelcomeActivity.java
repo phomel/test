@@ -25,13 +25,13 @@ public class WelcomeActivity extends BaseActivity {
     private AlphaAnimation anim;
 
     @Override
-    public int getContentViewId() {
-        return R.layout.activity_welcome;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public int getContentViewId() {
+        return R.layout.activity_welcome;
     }
 
     @Override

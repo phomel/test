@@ -27,6 +27,11 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     private ILoginPresenter loginPresenter;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public int getContentViewId() {
         return R.layout.activity_login;
     }
@@ -34,11 +39,6 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     @Override
     protected void initViews() {
         loginPresenter = new LoginPresenter(this, this);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override

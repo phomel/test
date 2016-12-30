@@ -29,6 +29,11 @@ public class MainActivity extends BaseActivity {
     public static UserBean user;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public int getContentViewId() {
         return R.layout.activity_main;
     }
@@ -69,8 +74,4 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 }
