@@ -1,6 +1,6 @@
 package com.joy.mytest.manager;
 
-import com.joy.mytest.application.CarLoanApp;
+import com.joy.mytest.application.App;
 import com.zhy.http.okhttp.cookie.store.CookieStore;
 import com.zhy.http.okhttp.cookie.store.PersistentCookieStore;
 
@@ -19,7 +19,7 @@ public class CookieJarImpl implements CookieJar {
     private CookieStore cookieStore;
 
     public CookieJarImpl() {
-        this.cookieStore = new PersistentCookieStore(CarLoanApp.instance);
+        this.cookieStore = new PersistentCookieStore(App.instance);
     }
 
     @Override

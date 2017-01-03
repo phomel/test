@@ -3,6 +3,7 @@ package com.joy.mytest.activity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ListView;
 
 import com.joy.mytest.R;
 import com.joy.mytest.base.BaseActivity;
@@ -50,7 +51,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        if (user != null){
+        if (user != null) {
             mToolbar.setTitle(user.getUser().getRole().getName());
         } else {
             mToolbar.setTitle(R.string.user_unLogin);

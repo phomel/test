@@ -8,14 +8,18 @@ import com.squareup.leakcanary.LeakCanary;
  * Created by Administrator on 2016/12/21.
  */
 
-public class CarLoanApp extends Application {
+public class App extends Application {
 
-    public static CarLoanApp instance;
+    public static App instance;
 
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
         LeakCanary.install(this);
+    }
+
+    public static App getInstance() {
+        return instance;
     }
 }
