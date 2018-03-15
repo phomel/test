@@ -29,6 +29,7 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String hah = "jj";
     }
 
     @Override
